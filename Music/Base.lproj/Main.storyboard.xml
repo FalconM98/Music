@@ -1,0 +1,1705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQP-Mo-eFE">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="gu3-qX-Qj9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BQP-Mo-eFE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OkD-Ht-KtB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="stq-bq-jby">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A21-Qv-8hk" kind="relationship" relationship="rootViewController" id="dZf-QQ-1db"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu4-vh-jD7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3690" y="-3603"/>
+        </scene>
+        <!--Metallica View Controller-->
+        <scene sceneID="L6x-4w-Fre">
+            <objects>
+                <viewController id="76c-wU-6eU" customClass="MetallicaViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ICI-m5-LZT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0F-hV-zHI">
+                                <rect key="frame" x="0.0" y="120" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="76c-wU-6eU" id="5Aa-sS-JPe"/>
+                                    <outlet property="delegate" destination="76c-wU-6eU" id="0ki-JD-w1h"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXZ-fp-HWI">
+                                <rect key="frame" x="82" y="344" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JSh-pD-XEJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Seleccionar Cancion"/>
+                                <connections>
+                                    <action selector="seleccionar:" destination="76c-wU-6eU" eventType="touchUpInside" id="bnq-8A-xXc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b0F-hV-zHI" firstAttribute="centerX" secondItem="ICI-m5-LZT" secondAttribute="centerX" id="5M5-Ni-pTI"/>
+                            <constraint firstItem="b0F-hV-zHI" firstAttribute="top" secondItem="PZl-Wq-c8n" secondAttribute="top" constant="56" id="N6T-tL-WoL"/>
+                            <constraint firstItem="UXZ-fp-HWI" firstAttribute="leading" secondItem="PZl-Wq-c8n" secondAttribute="leading" constant="82" id="c76-hx-w8e"/>
+                            <constraint firstItem="b0F-hV-zHI" firstAttribute="centerX" secondItem="UXZ-fp-HWI" secondAttribute="centerX" id="xXN-JA-A3w"/>
+                            <constraint firstItem="UXZ-fp-HWI" firstAttribute="top" secondItem="b0F-hV-zHI" secondAttribute="bottom" constant="8" symbolic="YES" id="yyC-kl-Kws"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PZl-Wq-c8n"/>
+                    </view>
+                    <connections>
+                        <outlet property="myPicker" destination="b0F-hV-zHI" id="usu-8f-anG"/>
+                        <segue destination="yBP-aY-yWg" kind="show" identifier="cancion1" id="7bt-zp-6XT"/>
+                        <segue destination="ODf-MY-38V" kind="show" identifier="cancion2" id="V3H-rb-Z9e"/>
+                        <segue destination="sdb-tB-IlF" kind="show" identifier="cancion3" id="ixR-Sy-jhY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bw-PQ-Z3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2606.25" y="-4350"/>
+        </scene>
+        <!--Reproductor de Música-->
+        <scene sceneID="ZAk-6a-hWp">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="A21-Qv-8hk" customClass="ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ewj-af-aMo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG1-Sv-uok">
+                                <rect key="frame" x="0.0" y="64" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="A21-Qv-8hk" id="0Uc-KD-rxU"/>
+                                    <outlet property="delegate" destination="A21-Qv-8hk" id="Mzg-kX-IoH"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBv-yv-dAM">
+                                <rect key="frame" x="75" y="326" width="184" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Seleccionar Artista"/>
+                                <connections>
+                                    <action selector="seleccionar:" destination="A21-Qv-8hk" eventType="touchUpInside" id="zFc-4o-8RS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EG1-Sv-uok" firstAttribute="top" secondItem="yrb-DW-v2y" secondAttribute="top" id="HcK-a2-QbH"/>
+                            <constraint firstItem="GBv-yv-dAM" firstAttribute="top" secondItem="EG1-Sv-uok" secondAttribute="bottom" constant="46" id="NPA-ls-u77"/>
+                            <constraint firstItem="yrb-DW-v2y" firstAttribute="trailing" secondItem="GBv-yv-dAM" secondAttribute="trailing" constant="61" id="cWc-eG-kij"/>
+                            <constraint firstItem="EG1-Sv-uok" firstAttribute="leading" secondItem="yrb-DW-v2y" secondAttribute="leading" id="jLo-QM-Cg0"/>
+                            <constraint firstItem="GBv-yv-dAM" firstAttribute="leading" secondItem="yrb-DW-v2y" secondAttribute="leading" constant="75" id="nja-ts-6IG"/>
+                            <constraint firstItem="EG1-Sv-uok" firstAttribute="trailing" secondItem="yrb-DW-v2y" secondAttribute="trailing" id="xxN-pK-569"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yrb-DW-v2y"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="apple" id="9GZ-2k-Hul"/>
+                    <navigationItem key="navigationItem" title="Reproductor de Música" id="l8o-BY-cBa"/>
+                    <connections>
+                        <outlet property="artistPicker" destination="EG1-Sv-uok" id="WzS-t3-O2o"/>
+                        <segue destination="pXw-lk-E0y" kind="show" identifier="view1" id="Ovu-5l-ZR7"/>
+                        <segue destination="Nkg-9w-hhe" kind="show" identifier="view3" id="UaQ-Db-lCr"/>
+                        <segue destination="76c-wU-6eU" kind="show" identifier="view2" id="jDv-N1-UFp"/>
+                        <segue destination="B3t-3q-a8p" kind="show" identifier="view4" id="sTx-VI-A0k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wz3-wE-woK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2616" y="-3603"/>
+        </scene>
+        <!--Letra View Controller-->
+        <scene sceneID="Mpc-R1-1XC">
+            <objects>
+                <viewController id="pXw-lk-E0y" customClass="LetraViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01K-Rd-p0p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufC-bp-2GL">
+                                <rect key="frame" x="0.0" y="107" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pXw-lk-E0y" id="dlE-dF-jry"/>
+                                    <outlet property="delegate" destination="pXw-lk-E0y" id="eMR-Bu-ILj"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-bW-KVF">
+                                <rect key="frame" x="54" y="369" width="213" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Seleccionar Canción"/>
+                                <connections>
+                                    <action selector="seleccionar:" destination="pXw-lk-E0y" eventType="touchUpInside" id="sd6-aA-mC6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ufC-bp-2GL" firstAttribute="leading" secondItem="cKJ-mQ-qPO" secondAttribute="leading" id="7oP-am-XYh"/>
+                            <constraint firstItem="cKJ-mQ-qPO" firstAttribute="trailing" secondItem="OWs-bW-KVF" secondAttribute="trailing" constant="53" id="Ffp-4I-bbt"/>
+                            <constraint firstItem="OWs-bW-KVF" firstAttribute="leading" secondItem="cKJ-mQ-qPO" secondAttribute="leading" constant="54" id="Im2-vV-j8J"/>
+                            <constraint firstItem="cKJ-mQ-qPO" firstAttribute="bottom" secondItem="OWs-bW-KVF" secondAttribute="bottom" constant="169" id="Kv5-DD-myv"/>
+                            <constraint firstItem="ufC-bp-2GL" firstAttribute="trailing" secondItem="cKJ-mQ-qPO" secondAttribute="trailing" id="Xcv-SP-pIZ"/>
+                            <constraint firstItem="ufC-bp-2GL" firstAttribute="top" secondItem="cKJ-mQ-qPO" secondAttribute="top" constant="43" id="kza-dc-bL8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cKJ-mQ-qPO"/>
+                    </view>
+                    <connections>
+                        <outlet property="letraPicker" destination="ufC-bp-2GL" id="7gr-dm-ElO"/>
+                        <segue destination="f6H-Sf-6eR" kind="show" identifier="cancion2" id="C2H-lF-ReF"/>
+                        <segue destination="XiL-Jf-X3n" kind="show" identifier="cancion1" id="HM9-oK-Pgc"/>
+                        <segue destination="Msq-z7-3AB" kind="show" identifier="cancion3" id="hu1-Tc-Jeh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKJ-va-ZoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1718" y="-3603"/>
+        </scene>
+        <!--CancionACDC2 View Controller-->
+        <scene sceneID="2O4-Xh-Nfk">
+            <objects>
+                <viewController id="f6H-Sf-6eR" customClass="CancionACDC2ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wzJ-yI-ROb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-ACDC-TNT" translatesAutoresizingMaskIntoConstraints="NO" id="n6u-q8-aCW">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="rJl-9u-HZy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynE-rq-Oba">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="f6H-Sf-6eR" eventType="touchUpInside" id="HLh-J0-lcK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xCD-7D-OAv">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">(Oi, oi, oi, oi, oi, oi, oi, oi, oi, oi, oi, oi, oi, oi, oi)
+
+See me ride out of the sunset
+On your colour TV screen
+Out for all that I can get
+If you know what I mean
+Women to the left of me
+And women to the right
+Ain't got no gun
+Ain't got no knife
+Don't you start no fight
+
+'Cause I'm T.N.T., I'm dynamite
+(T.N.T.) and I'll win the fight
+(T.N.T.) I'm a power load
+(T.N.T.) watch me explode
+
+I'm dirty, mean, and mighty unclean
+I'm a wanted man
+Public enemy number one
+Understand?
+So lock up your daughter
+Lock up your wife
+Lock up your back door
+And run for your life
+The man is back in town
+So don't you mess me 'round
+
+'Cause I'm T.N.T. I'm dynamite
+(T.N.T.) and I'll win the fight
+(T.N.T.) I'm a power load
+(T.N.T.) watch me explode
+
+T.N.T., (oi, oi, oi)
+T.N.T., (oi, oi, oi)
+T.N.T., (oi, oi, oi)
+T.N.T., (oi, oi, oi)
+
+T.N.T., (oi, oi, oi), I'm dynamite
+(T.N.T., oi, oi, oi), and I'll win the fight
+(T.N.T., oi, oi, oi), I'm a power load
+(T.N.T.), watch me explode!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phx-cG-hr5">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="f6H-Sf-6eR" eventType="touchUpInside" id="Xc8-U1-hOg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xCD-7D-OAv" firstAttribute="top" secondItem="Phx-cG-hr5" secondAttribute="bottom" constant="8" symbolic="YES" id="6R6-Ph-oeC"/>
+                            <constraint firstItem="Phx-cG-hr5" firstAttribute="leading" secondItem="e2u-Y5-hpc" secondAttribute="leading" constant="24" id="BnA-Ix-xUK"/>
+                            <constraint firstItem="e2u-Y5-hpc" firstAttribute="trailing" secondItem="ynE-rq-Oba" secondAttribute="trailing" constant="23" id="DgS-i2-XXn"/>
+                            <constraint firstItem="Phx-cG-hr5" firstAttribute="baseline" secondItem="ynE-rq-Oba" secondAttribute="baseline" id="E8V-BS-cAS"/>
+                            <constraint firstItem="n6u-q8-aCW" firstAttribute="centerX" secondItem="wzJ-yI-ROb" secondAttribute="centerX" id="GGt-cB-kf2"/>
+                            <constraint firstItem="Phx-cG-hr5" firstAttribute="top" secondItem="n6u-q8-aCW" secondAttribute="bottom" constant="46" id="LzV-Yv-JLW"/>
+                            <constraint firstItem="n6u-q8-aCW" firstAttribute="leading" secondItem="e2u-Y5-hpc" secondAttribute="leading" constant="40" id="SU0-u8-ODo"/>
+                            <constraint firstItem="n6u-q8-aCW" firstAttribute="top" secondItem="e2u-Y5-hpc" secondAttribute="top" id="aqY-Ax-Fp8"/>
+                            <constraint firstItem="n6u-q8-aCW" firstAttribute="trailing" secondItem="xCD-7D-OAv" secondAttribute="trailing" id="c9n-zy-n7L"/>
+                            <constraint firstItem="n6u-q8-aCW" firstAttribute="leading" secondItem="xCD-7D-OAv" secondAttribute="leading" id="svk-ke-SeH"/>
+                            <constraint firstAttribute="bottom" secondItem="xCD-7D-OAv" secondAttribute="bottom" constant="20" symbolic="YES" id="vYT-sv-K2y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e2u-Y5-hpc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K99-Gz-kgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-911" y="-4298"/>
+        </scene>
+        <!--CancionACDC1 View Controller-->
+        <scene sceneID="Lr4-9t-R9C">
+            <objects>
+                <viewController id="XiL-Jf-X3n" customClass="CancionACDC1ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mRM-Vh-HEe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Acdc_backinblack_cover" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-p4-s0C">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7Rt-wJ-30K"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKH-Y0-Z9y">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="XiL-Jf-X3n" eventType="touchUpInside" id="7e2-Uu-DZO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iwM-0b-GtD">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Back in black I hit the sack
+I've been too long I'm glad to be back
+Yes I am
+Let loose from the noose
+That's kept me hanging about
+I kept looking at the sky cause it's gettin' me high
+Forget the hearse cause I'll never die
+I got nine lives cat's eyes
+Abusin' every one of them and runnin' wild
+Cause I'm back
+Yes I'm back
+Well I'm back
+Yes I'm back
+Well I'm back back
+Well I'm back in black
+Yes I'm back in black
+Back in the back of a Cadillac
+Number one with a bullet I'm a power pack
+Yes I am
+In a bang with the gang
+They've got to catch me if they want me to hang
+Cause I'm back on the track and I'm beatin' the flack
+Nobody's gonna get me on another rap
+So look at me now I'm just makin' my play
+Don't try to push your luck just get out of my way
+Cause I'm back
+Yes I'm back
+Well I'm back
+Yes I'm back
+Well I'm back back
+Well I'm back in black
+Yes I'm back in black
+
+Well I'm back yes I'm back
+Well I'm back yes I'm back
+Well I'm back back
+Well I'm back in black
+Yes I'm back in black
+
+Ho yeah
+Oh yeah
+Yes I am
+Oh yeah, yeah oh yeah
+Back in now
+
+Well I'm back, I'm back
+Back, (I'm back)
+Back, (I'm back)
+Back, (I'm back)
+Back, (I'm back)
+Back
+Back in black
+Yes I'm back in black
+
+Outta sight</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmk-Ll-Ilg">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="XiL-Jf-X3n" eventType="touchUpInside" id="U6V-c9-fS6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iwM-0b-GtD" firstAttribute="top" secondItem="vmk-Ll-Ilg" secondAttribute="bottom" constant="8" symbolic="YES" id="INI-OV-CgZ"/>
+                            <constraint firstItem="mIJ-p4-s0C" firstAttribute="leading" secondItem="iwM-0b-GtD" secondAttribute="leading" id="J6f-wz-RKc"/>
+                            <constraint firstItem="mIJ-p4-s0C" firstAttribute="top" secondItem="02M-d4-dTT" secondAttribute="top" id="Mm8-8z-Rfc"/>
+                            <constraint firstItem="mIJ-p4-s0C" firstAttribute="trailing" secondItem="iwM-0b-GtD" secondAttribute="trailing" id="NkU-1T-jpm"/>
+                            <constraint firstItem="mIJ-p4-s0C" firstAttribute="centerX" secondItem="mRM-Vh-HEe" secondAttribute="centerX" id="Nug-Wi-Ncr"/>
+                            <constraint firstItem="vmk-Ll-Ilg" firstAttribute="leading" secondItem="02M-d4-dTT" secondAttribute="leading" constant="24" id="i0z-3b-6n2"/>
+                            <constraint firstAttribute="bottom" secondItem="iwM-0b-GtD" secondAttribute="bottom" constant="20" symbolic="YES" id="jTv-dA-7eF"/>
+                            <constraint firstItem="mIJ-p4-s0C" firstAttribute="leading" secondItem="02M-d4-dTT" secondAttribute="leading" constant="40" id="k2S-W3-Xzg"/>
+                            <constraint firstItem="02M-d4-dTT" firstAttribute="trailing" secondItem="AKH-Y0-Z9y" secondAttribute="trailing" constant="23" id="qeJ-wx-IhH"/>
+                            <constraint firstItem="vmk-Ll-Ilg" firstAttribute="top" secondItem="mIJ-p4-s0C" secondAttribute="bottom" constant="46" id="r29-Zd-VW9"/>
+                            <constraint firstItem="vmk-Ll-Ilg" firstAttribute="baseline" secondItem="AKH-Y0-Z9y" secondAttribute="baseline" id="sQG-51-SrA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="02M-d4-dTT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mz-yg-leX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-911" y="-3588"/>
+        </scene>
+        <!--CancionACDC3 View Controller-->
+        <scene sceneID="9h4-ag-SfB">
+            <objects>
+                <viewController id="Msq-z7-3AB" customClass="CancionACDC3ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q3O-86-SrY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover-black-ice" translatesAutoresizingMaskIntoConstraints="NO" id="0d9-QU-Wlo">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RMo-Iu-kN0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4l-FT-teF">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="Msq-z7-3AB" eventType="touchUpInside" id="WF5-Sb-8FK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="87r-1B-gHx">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">One hot angel
+One cool devil
+Your mind on the fantasy
+Living on the ecstasy
+Give it all, give it,
+Give it what you got
+Come on give it all a lot
+Pick it up move it
+Give it to the spot
+Your mind on fantasy
+Living on ecstasy
+
+Runaway Train
+(Running right off the track)
+Runaway Train
+(Running right off the track)
+Runaway Train
+(Running right off the track)
+Yeah the Runaway Train
+(Running right off the track)
+
+One hard reng a ale
+Old school rebel
+A ten for the revelry
+Diamond of the agency
+Shake it, Shake it
+Take it to the spot
+You know she make it really hot
+Get it on, get it up
+Come on give it all you got
+Your mind on fantasy
+Living on the ecstasy
+
+Runaway Train
+(Running right off the track)
+Yeah the Runaway Train yeah
+(Running right off the track)
+On the Runaway Train
+(Running right off the track)
+Runaway Train
+(Running right off the track)
+
+[Guitar Solo]
+
+One hot southern belle
+Son of a devil
+A school boy spelling bee
+A school girl with a fantasy
+One hot reng a ale
+Old school rebel
+A ten for the revelry
+Diamond of the agency
+Shake it, Shake it
+Take it to the spot
+You know she make it really hot Yeah
+Get it on, get it up
+Come on give it what you got
+You know she’s just like a
+
+Runaway Train
+(Running right off the track)
+She’s coming off the track
+Runaway Train
+(Running right off the track)
+Get it on, get it up
+Come on give it all you got
+Runaway Train
+(Running right off the track)
+Runaway Train
+(Running right off the track)
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpa-7u-sRj">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="Msq-z7-3AB" eventType="touchUpInside" id="PWl-Jd-BAy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wpa-7u-sRj" firstAttribute="baseline" secondItem="R4l-FT-teF" secondAttribute="baseline" id="4Pt-Fe-IjC"/>
+                            <constraint firstItem="0d9-QU-Wlo" firstAttribute="trailing" secondItem="87r-1B-gHx" secondAttribute="trailing" id="6l7-Rs-kub"/>
+                            <constraint firstItem="Wpa-7u-sRj" firstAttribute="top" secondItem="0d9-QU-Wlo" secondAttribute="bottom" constant="46" id="AdY-oF-QmO"/>
+                            <constraint firstItem="Wpa-7u-sRj" firstAttribute="leading" secondItem="CBt-de-66G" secondAttribute="leading" constant="24" id="Efj-JP-vZo"/>
+                            <constraint firstItem="CBt-de-66G" firstAttribute="trailing" secondItem="R4l-FT-teF" secondAttribute="trailing" constant="23" id="Kya-oV-eLa"/>
+                            <constraint firstItem="0d9-QU-Wlo" firstAttribute="leading" secondItem="87r-1B-gHx" secondAttribute="leading" id="LSd-WS-LZw"/>
+                            <constraint firstAttribute="bottom" secondItem="87r-1B-gHx" secondAttribute="bottom" constant="20" symbolic="YES" id="Nfg-Pw-9bo"/>
+                            <constraint firstItem="0d9-QU-Wlo" firstAttribute="top" secondItem="CBt-de-66G" secondAttribute="top" id="Utc-B2-4Uf"/>
+                            <constraint firstItem="0d9-QU-Wlo" firstAttribute="leading" secondItem="CBt-de-66G" secondAttribute="leading" constant="40" id="VIU-zv-hdH"/>
+                            <constraint firstItem="0d9-QU-Wlo" firstAttribute="centerX" secondItem="Q3O-86-SrY" secondAttribute="centerX" id="biB-8v-CuF"/>
+                            <constraint firstItem="87r-1B-gHx" firstAttribute="top" secondItem="Wpa-7u-sRj" secondAttribute="bottom" constant="8" symbolic="YES" id="yrU-EK-3uZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CBt-de-66G"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdp-9e-6EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="-3603"/>
+        </scene>
+        <!--BlackS View Controller-->
+        <scene sceneID="4HC-L8-mFQ">
+            <objects>
+                <viewController id="Nkg-9w-hhe" customClass="BlackSViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZY-tZ-VbO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7U-rW-LQ0">
+                                <rect key="frame" x="0.0" y="107" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nkg-9w-hhe" id="ABv-sa-ENT"/>
+                                    <outlet property="delegate" destination="Nkg-9w-hhe" id="4MO-gz-8aI"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4w-bc-NgB">
+                                <rect key="frame" x="54" y="369" width="213" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Seleccionar Canción"/>
+                                <connections>
+                                    <action selector="seleccionar:" destination="Nkg-9w-hhe" eventType="touchUpInside" id="hna-vM-Dgc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y7U-rW-LQ0" firstAttribute="leading" secondItem="pOX-WR-H1c" secondAttribute="leading" id="7pZ-cn-JDl"/>
+                            <constraint firstItem="pOX-WR-H1c" firstAttribute="trailing" secondItem="M4w-bc-NgB" secondAttribute="trailing" constant="53" id="8ol-aa-UNb"/>
+                            <constraint firstItem="M4w-bc-NgB" firstAttribute="leading" secondItem="pOX-WR-H1c" secondAttribute="leading" constant="54" id="De2-NQ-SaV"/>
+                            <constraint firstItem="pOX-WR-H1c" firstAttribute="bottom" secondItem="M4w-bc-NgB" secondAttribute="bottom" constant="169" id="LnW-D6-aqp"/>
+                            <constraint firstItem="Y7U-rW-LQ0" firstAttribute="trailing" secondItem="pOX-WR-H1c" secondAttribute="trailing" id="kOz-0J-aLU"/>
+                            <constraint firstItem="Y7U-rW-LQ0" firstAttribute="top" secondItem="pOX-WR-H1c" secondAttribute="top" constant="43" id="o9N-bA-hl2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pOX-WR-H1c"/>
+                    </view>
+                    <connections>
+                        <outlet property="myPicker" destination="Y7U-rW-LQ0" id="qmZ-je-oRI"/>
+                        <segue destination="XyZ-dT-G60" kind="show" identifier="cancion1" id="5bz-Zd-Y6E"/>
+                        <segue destination="xlO-yD-sYg" kind="show" identifier="cancion2" id="ERA-Bb-MnE"/>
+                        <segue destination="JMz-nK-tVy" kind="show" identifier="cancion3" id="YSF-Ja-vAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoB-5E-1aN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4247" y="-2779"/>
+        </scene>
+        <!--Cancion Black1 View Controller-->
+        <scene sceneID="7ah-TY-qne">
+            <objects>
+                <viewController id="XyZ-dT-G60" customClass="CancionBlack1ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="86O-CW-kzA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="81K4W71c38L._SX355_" translatesAutoresizingMaskIntoConstraints="NO" id="cVf-Z7-fuH">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hh4-8p-HTU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FJ-8Z-xpm">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="XyZ-dT-G60" eventType="touchUpInside" id="zSB-H4-0xH"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oin-Ee-eGe">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Some people say my love cannot be true
+please believe me, my love, and I'll show you
+I will give you those things you thought unreal
+The sun, the moon, the stars all bear my seal
+
+Oh yeah!
+
+Follow me now and you will not regret
+leaving the life you led before we met
+You are the first to have this love of mine
+forever with me 'till the end of time
+
+Your love for me has just got to be real
+before you know the way I'm going to feel
+I'm going to feel
+I'm going to feel
+
+Oh yeah!
+
+Now I have you with me, under my power
+Our love grows stronger now with every hour
+Look into my eyes, you will see who I am
+my name is Lucifer, please take my hand
+
+Oh yeah!
+
+Follow me now and you will not regret
+leaving the life you led before we met
+You are the first to have this love of mine
+forever with me 'till the end of time
+
+Your love for me has just got to be real
+before you know the way I'm going to feel
+I'm going to feel
+I'm going to feel
+
+Oh yeah!
+
+Now I have you with me, under my power
+Our love grows stronger now with every hour
+Look into my eyes, you will see who I am
+my name is Lucifer, please take my hand
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UE7-fT-JA9">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="XyZ-dT-G60" eventType="touchUpInside" id="ftT-oF-ds0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UE7-fT-JA9" firstAttribute="baseline" secondItem="5FJ-8Z-xpm" secondAttribute="baseline" id="37g-B1-1xP"/>
+                            <constraint firstItem="cVf-Z7-fuH" firstAttribute="trailing" secondItem="oin-Ee-eGe" secondAttribute="trailing" id="5dm-fQ-gQ4"/>
+                            <constraint firstItem="cVf-Z7-fuH" firstAttribute="top" secondItem="me5-Kq-O1j" secondAttribute="top" id="671-3X-y1q"/>
+                            <constraint firstItem="cVf-Z7-fuH" firstAttribute="centerX" secondItem="86O-CW-kzA" secondAttribute="centerX" id="8w3-jk-OAK"/>
+                            <constraint firstItem="cVf-Z7-fuH" firstAttribute="leading" secondItem="oin-Ee-eGe" secondAttribute="leading" id="E6s-UB-lBL"/>
+                            <constraint firstItem="oin-Ee-eGe" firstAttribute="top" secondItem="UE7-fT-JA9" secondAttribute="bottom" constant="8" symbolic="YES" id="Efr-sb-Fkj"/>
+                            <constraint firstItem="me5-Kq-O1j" firstAttribute="trailing" secondItem="5FJ-8Z-xpm" secondAttribute="trailing" constant="23" id="REu-Kn-hO8"/>
+                            <constraint firstItem="UE7-fT-JA9" firstAttribute="top" secondItem="cVf-Z7-fuH" secondAttribute="bottom" constant="46" id="Uca-qN-bYh"/>
+                            <constraint firstItem="UE7-fT-JA9" firstAttribute="leading" secondItem="me5-Kq-O1j" secondAttribute="leading" constant="24" id="eC5-JQ-eSk"/>
+                            <constraint firstAttribute="bottom" secondItem="oin-Ee-eGe" secondAttribute="bottom" constant="20" symbolic="YES" id="fiT-iY-9dx"/>
+                            <constraint firstItem="cVf-Z7-fuH" firstAttribute="leading" secondItem="me5-Kq-O1j" secondAttribute="leading" constant="40" id="tko-9R-iTN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="me5-Kq-O1j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2P-TQ-Nxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4772" y="-2013"/>
+        </scene>
+        <!--Cancion Black2 View Controller-->
+        <scene sceneID="Frk-YJ-BMH">
+            <objects>
+                <viewController id="xlO-yD-sYg" customClass="CancionBlack2ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gj3-3L-Rem">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-zA-3e8">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="xlO-yD-sYg" eventType="touchUpInside" id="ZHK-zD-zTe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyu-uW-jY7">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="xlO-yD-sYg" eventType="touchUpInside" id="xem-yy-pQ4"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JtL-yg-Lfh">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Finished with my woman 'cause she couldn't help me with my mind
+people think I'm insane because I am frowning all the time
+All day long I think of things but nothing seems to satisfy
+Think I'll lose my mind if I don't find something to pacify
+
+Can you help me occupy my brain?
+Oh yeah
+
+I need someone to show me the things in life that I can't find
+I can't see the things that make true happiness, I must be blind
+
+Make a joke and I will sigh and you will laugh and I will cry
+Happiness I cannot feel and love to me is so unreal
+
+And so as you hear these words telling you now of my state
+I tell you to enjoy life I wish I could but it's too late
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Black_Sabbath_-_Paranoid" translatesAutoresizingMaskIntoConstraints="NO" id="d9e-EF-ldD">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="JY3-Be-sU0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pES-kK-udJ" firstAttribute="trailing" secondItem="eyu-uW-jY7" secondAttribute="trailing" constant="23" id="7xF-cW-set"/>
+                            <constraint firstItem="d9e-EF-ldD" firstAttribute="centerX" secondItem="gj3-3L-Rem" secondAttribute="centerX" id="9yb-q2-zOp"/>
+                            <constraint firstItem="d9e-EF-ldD" firstAttribute="leading" secondItem="pES-kK-udJ" secondAttribute="leading" constant="40" id="BKg-Ml-fOo"/>
+                            <constraint firstItem="qJq-zA-3e8" firstAttribute="leading" secondItem="pES-kK-udJ" secondAttribute="leading" constant="24" id="G2z-nj-tzG"/>
+                            <constraint firstItem="JtL-yg-Lfh" firstAttribute="top" secondItem="qJq-zA-3e8" secondAttribute="bottom" constant="8" symbolic="YES" id="HyP-uE-W6e"/>
+                            <constraint firstItem="d9e-EF-ldD" firstAttribute="trailing" secondItem="JtL-yg-Lfh" secondAttribute="trailing" id="YYG-B5-Rud"/>
+                            <constraint firstItem="qJq-zA-3e8" firstAttribute="top" secondItem="d9e-EF-ldD" secondAttribute="bottom" constant="46" id="Z4o-PQ-7RM"/>
+                            <constraint firstAttribute="bottom" secondItem="JtL-yg-Lfh" secondAttribute="bottom" constant="20" symbolic="YES" id="fPu-Zb-Mrs"/>
+                            <constraint firstItem="d9e-EF-ldD" firstAttribute="leading" secondItem="JtL-yg-Lfh" secondAttribute="leading" id="j3M-Fl-tov"/>
+                            <constraint firstItem="d9e-EF-ldD" firstAttribute="top" secondItem="pES-kK-udJ" secondAttribute="top" id="jXT-mb-TgQ"/>
+                            <constraint firstItem="qJq-zA-3e8" firstAttribute="baseline" secondItem="eyu-uW-jY7" secondAttribute="baseline" id="xjv-vJ-vfY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pES-kK-udJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVW-fT-C41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3347" y="-2013"/>
+        </scene>
+        <!--Cancion Black3 View Controller-->
+        <scene sceneID="YKf-wH-Qtd">
+            <objects>
+                <viewController id="JMz-nK-tVy" customClass="CancionBlack3ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uU6-gm-rm8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Black_Sabbath_-_Paranoid" translatesAutoresizingMaskIntoConstraints="NO" id="p0n-fx-tRX">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ATl-xo-0dP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz1-69-DC0">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="JMz-nK-tVy" eventType="touchUpInside" id="LvE-Cr-yjd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-af-WTh">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">I am Iron Man
+
+Has he lost his mind?
+Can he see or is he blind?
+Can he walk at all
+Or if he moves will he fall?
+
+Is he alive or dead?
+Has he thoughts within his head?
+We'll just pass him there
+Why should we even care?
+
+He was turned to steel
+In the great magnetic field
+When he traveled time
+For the future of mankind
+
+Nobody wants him
+He just stares at the world
+Planning his vengeance
+That he will soon unfurl
+
+Now the time is here
+For Iron Man to spread fear
+Vengeance from the grave
+Kills the people he once saved
+
+Nobody wants him
+They just turn their heads
+Nobody helps him
+Now he has his revenge
+
+Heavy boots of lead
+Fill his victims full of dread
+Running as fast as they can
+Iron Man lives again!</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-Dq-kzK">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="JMz-nK-tVy" eventType="touchUpInside" id="x5J-pB-Dyg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AZK-Dq-kzK" firstAttribute="leading" secondItem="TER-GL-1V6" secondAttribute="leading" constant="24" id="3HD-EA-QkN"/>
+                            <constraint firstItem="p0n-fx-tRX" firstAttribute="top" secondItem="TER-GL-1V6" secondAttribute="top" id="BpD-R4-2RF"/>
+                            <constraint firstItem="TER-GL-1V6" firstAttribute="trailing" secondItem="Rz1-69-DC0" secondAttribute="trailing" constant="23" id="Cfk-bZ-E34"/>
+                            <constraint firstItem="p0n-fx-tRX" firstAttribute="leading" secondItem="ftI-af-WTh" secondAttribute="leading" id="MLZ-rr-ube"/>
+                            <constraint firstItem="ftI-af-WTh" firstAttribute="top" secondItem="AZK-Dq-kzK" secondAttribute="bottom" constant="8" symbolic="YES" id="QIb-t6-1GR"/>
+                            <constraint firstItem="p0n-fx-tRX" firstAttribute="leading" secondItem="TER-GL-1V6" secondAttribute="leading" constant="40" id="RVX-Pg-lF4"/>
+                            <constraint firstItem="AZK-Dq-kzK" firstAttribute="baseline" secondItem="Rz1-69-DC0" secondAttribute="baseline" id="bMm-nv-br0"/>
+                            <constraint firstItem="p0n-fx-tRX" firstAttribute="centerX" secondItem="uU6-gm-rm8" secondAttribute="centerX" id="bku-Ap-nkf"/>
+                            <constraint firstItem="AZK-Dq-kzK" firstAttribute="top" secondItem="p0n-fx-tRX" secondAttribute="bottom" constant="46" id="dVp-f6-glq"/>
+                            <constraint firstItem="p0n-fx-tRX" firstAttribute="trailing" secondItem="ftI-af-WTh" secondAttribute="trailing" id="inG-ag-czc"/>
+                            <constraint firstAttribute="bottom" secondItem="ftI-af-WTh" secondAttribute="bottom" constant="20" symbolic="YES" id="zI5-JC-YeP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TER-GL-1V6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yji-AN-B6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3300" y="-2779"/>
+        </scene>
+        <!--VanH View Controller-->
+        <scene sceneID="9h9-gy-7ea">
+            <objects>
+                <viewController id="B3t-3q-a8p" customClass="VanHViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOq-ej-Pab">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="69B-lW-YS7">
+                                <rect key="frame" x="0.0" y="87" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="B3t-3q-a8p" id="aq7-v8-Yeb"/>
+                                    <outlet property="delegate" destination="B3t-3q-a8p" id="Zru-31-51h"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-lM-NLK">
+                                <rect key="frame" x="80" y="328" width="174" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Seleccionar Cancion"/>
+                                <connections>
+                                    <action selector="seleccionar:" destination="B3t-3q-a8p" eventType="touchUpInside" id="Yqa-1D-rOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HO9-pL-6L2" firstAttribute="trailing" secondItem="nLp-lM-NLK" secondAttribute="trailing" constant="66" id="10R-wP-kRp"/>
+                            <constraint firstItem="69B-lW-YS7" firstAttribute="leading" secondItem="HO9-pL-6L2" secondAttribute="leading" id="70e-yX-mOf"/>
+                            <constraint firstItem="69B-lW-YS7" firstAttribute="top" secondItem="HO9-pL-6L2" secondAttribute="top" constant="23" id="K1W-ZU-BJN"/>
+                            <constraint firstItem="69B-lW-YS7" firstAttribute="trailing" secondItem="HO9-pL-6L2" secondAttribute="trailing" id="Wy2-1W-6h0"/>
+                            <constraint firstItem="HO9-pL-6L2" firstAttribute="bottom" secondItem="nLp-lM-NLK" secondAttribute="bottom" constant="205" id="fTf-hn-OgT"/>
+                            <constraint firstItem="nLp-lM-NLK" firstAttribute="top" secondItem="69B-lW-YS7" secondAttribute="bottom" constant="25" id="ovY-hZ-g0n"/>
+                            <constraint firstItem="nLp-lM-NLK" firstAttribute="leading" secondItem="HO9-pL-6L2" secondAttribute="leading" constant="80" id="vCf-TN-4bX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HO9-pL-6L2"/>
+                    </view>
+                    <connections>
+                        <outlet property="myPicker" destination="69B-lW-YS7" id="lqO-YH-y7x"/>
+                        <segue destination="t2x-Vt-sXW" kind="show" identifier="cancion1" id="xcN-Ew-PdN"/>
+                        <segue destination="bSQ-Cr-Vwe" kind="show" identifier="cancion2" id="X4N-6A-g98"/>
+                        <segue destination="1cC-vV-z8E" kind="show" identifier="cancion3" id="JDn-6t-oc6"/>
+                        <segue destination="YDI-yG-zLW" kind="show" identifier="cancion4" id="RPg-bB-U0Z"/>
+                        <segue destination="dGC-yy-9pZ" kind="show" identifier="cancion5" id="XNF-Gg-8F0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZv-8V-9yh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1999" y="-2765"/>
+        </scene>
+        <!--Cancion Metallica1 View Controller-->
+        <scene sceneID="drP-yc-BsY">
+            <objects>
+                <viewController id="yBP-aY-yWg" customClass="CancionMetallica1ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i8q-ft-Vpo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="422827" translatesAutoresizingMaskIntoConstraints="NO" id="6Je-Q9-SEN">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Nbh-Gn-SyD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaA-pa-Kax">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="yBP-aY-yWg" eventType="touchUpInside" id="Rqq-bM-0hK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-VK-zLe">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="yBP-aY-yWg" eventType="touchUpInside" id="DN8-rd-ai1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XhT-gl-A8E">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Say your prayers, little one
+Don't forget, my son
+To include everyone
+
+I tuck you in, warm within
+Keep you free from sin
+Till the Sandman he comes
+
+Sleep with one eye open
+Gripping your pillow tight
+
+Exit light
+Enter night
+Take my hand
+We're off to Never—, Neverland
+
+Something's wrong, shut the light
+Heavy thoughts tonight
+And they aren't of Snow White
+
+Dreams of war, dreams of liars
+Dreams of dragon's fire
+And of things that will bite
+
+Sleep with one eye open
+Gripping your pillow tight
+
+Exit light
+Enter night
+Take my hand
+We're off to Never—, Neverland
+
+Now I lay me down to sleep
+Pray the Lord my soul to keep
+If I die before I wake
+Pray the Lord my soul to take
+
+Hush little baby, don't say a word
+And never mind that noise you heard
+It's just the beasts under your bed
+In your closet, in your head
+
+Exit light
+Enter night
+Grain of sand
+
+Exit light
+Enter night
+Take my hand
+We're off to Never—, Neverland
+
+We're off to Never—, Neverland
+Take my hand
+We're off to Never—, Neverland
+Take my hand
+We're off to Never—, Neverland
+We're off to Never—, Neverland
+We're off to Never—, Neverland
+We're off to Never—, Neverland</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Je-Q9-SEN" firstAttribute="centerX" secondItem="i8q-ft-Vpo" secondAttribute="centerX" id="2tp-nn-2LB"/>
+                            <constraint firstItem="6Je-Q9-SEN" firstAttribute="trailing" secondItem="XhT-gl-A8E" secondAttribute="trailing" id="4eD-Pk-xMj"/>
+                            <constraint firstItem="qaA-pa-Kax" firstAttribute="leading" secondItem="mei-6U-o3C" secondAttribute="leading" constant="24" id="8zP-m5-WTp"/>
+                            <constraint firstItem="6Je-Q9-SEN" firstAttribute="leading" secondItem="mei-6U-o3C" secondAttribute="leading" constant="40" id="ADU-IF-6eE"/>
+                            <constraint firstItem="qaA-pa-Kax" firstAttribute="baseline" secondItem="IaV-VK-zLe" secondAttribute="baseline" id="LLS-zM-LGl"/>
+                            <constraint firstItem="mei-6U-o3C" firstAttribute="trailing" secondItem="IaV-VK-zLe" secondAttribute="trailing" constant="23" id="SvU-oe-ZZi"/>
+                            <constraint firstItem="XhT-gl-A8E" firstAttribute="top" secondItem="qaA-pa-Kax" secondAttribute="bottom" constant="8" symbolic="YES" id="YqV-Zv-GhJ"/>
+                            <constraint firstItem="6Je-Q9-SEN" firstAttribute="leading" secondItem="XhT-gl-A8E" secondAttribute="leading" id="bWm-0J-aDV"/>
+                            <constraint firstItem="6Je-Q9-SEN" firstAttribute="top" secondItem="mei-6U-o3C" secondAttribute="top" id="d6W-og-zhb"/>
+                            <constraint firstItem="qaA-pa-Kax" firstAttribute="top" secondItem="6Je-Q9-SEN" secondAttribute="bottom" constant="46" id="hb9-OP-HbR"/>
+                            <constraint firstAttribute="bottom" secondItem="XhT-gl-A8E" secondAttribute="bottom" constant="20" symbolic="YES" id="j97-lx-8gP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mei-6U-o3C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQV-xe-OgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3641" y="-4350"/>
+        </scene>
+        <!--Cancion Metallica3 View Controller-->
+        <scene sceneID="T1a-rP-DuC">
+            <objects>
+                <viewController id="sdb-tB-IlF" customClass="CancionMetallica3ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6P5-81-rrG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Metallica_-_Kill_'Em_All_cover" translatesAutoresizingMaskIntoConstraints="NO" id="wBQ-pp-Y5q">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="25r-xu-Aq5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2x9-hY-PB7">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="sdb-tB-IlF" eventType="touchUpInside" id="6n1-Jy-BCr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-nW-XUN">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="sdb-tB-IlF" eventType="touchUpInside" id="qzy-C0-1Ln"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vQT-jA-Zzu">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">We’re scanning the scene in the city tonight
+We’re looking for you to start up a fight
+There’s an evil feeling in our brains
+But it’s nothing new, you know it drives us insane
+
+Running
+On our way
+Hiding
+You will pay
+Dying
+One thousand deaths
+Running
+On our way
+Hiding
+You will pay
+Dying
+One thousand deaths
+
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+
+There is no escape and that’s for sure
+This is the end, we won't take any more
+Say goodbye to the world you live in
+You’ve always been taking but now you’re giving
+
+Running
+On our way
+Hiding
+You will pay
+Dying
+One thousand deaths
+Running
+On our way
+Hiding
+You will pay
+Dying
+One thousand deaths
+
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+
+Our brains are on fire with the feeling to kill
+And it won't go away until our dreams are fulfilled
+There is only one thing on our minds
+Don’t try running away ‘cause you’re the one we will find
+
+Running
+On our way
+Hiding
+You will pay
+Dying
+One thousand deaths
+Running
+On our way
+Hiding
+You will pay
+Dying
+One thousand deaths
+
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+Searching
+Seek and destroy
+Searching
+Seek and destroy</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wBQ-pp-Y5q" firstAttribute="centerX" secondItem="6P5-81-rrG" secondAttribute="centerX" id="2el-YI-jko"/>
+                            <constraint firstItem="2x9-hY-PB7" firstAttribute="leading" secondItem="gNY-hv-9Sg" secondAttribute="leading" constant="24" id="2ie-KK-s3J"/>
+                            <constraint firstItem="2x9-hY-PB7" firstAttribute="baseline" secondItem="ARQ-nW-XUN" secondAttribute="baseline" id="E3r-Kc-cwp"/>
+                            <constraint firstItem="wBQ-pp-Y5q" firstAttribute="top" secondItem="gNY-hv-9Sg" secondAttribute="top" id="IZb-O7-nkO"/>
+                            <constraint firstItem="wBQ-pp-Y5q" firstAttribute="trailing" secondItem="vQT-jA-Zzu" secondAttribute="trailing" id="KoB-76-CWA"/>
+                            <constraint firstAttribute="bottom" secondItem="vQT-jA-Zzu" secondAttribute="bottom" constant="20" symbolic="YES" id="YMk-Yp-Zr1"/>
+                            <constraint firstItem="gNY-hv-9Sg" firstAttribute="trailing" secondItem="ARQ-nW-XUN" secondAttribute="trailing" constant="23" id="ZAk-f8-HIc"/>
+                            <constraint firstItem="wBQ-pp-Y5q" firstAttribute="leading" secondItem="vQT-jA-Zzu" secondAttribute="leading" id="kdK-3I-ocY"/>
+                            <constraint firstItem="wBQ-pp-Y5q" firstAttribute="leading" secondItem="gNY-hv-9Sg" secondAttribute="leading" constant="40" id="lRD-gJ-Abc"/>
+                            <constraint firstItem="vQT-jA-Zzu" firstAttribute="top" secondItem="2x9-hY-PB7" secondAttribute="bottom" constant="8" symbolic="YES" id="pw5-ws-6Yf"/>
+                            <constraint firstItem="2x9-hY-PB7" firstAttribute="top" secondItem="wBQ-pp-Y5q" secondAttribute="bottom" constant="46" id="vBb-FF-JES"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gNY-hv-9Sg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2V-fI-eeq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2619" y="-5067"/>
+        </scene>
+        <!--Cancion Metallica2 View Controller-->
+        <scene sceneID="wVF-KL-AhK">
+            <objects>
+                <viewController id="ODf-MY-38V" customClass="CancionMetallica2ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nLw-0N-42u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Metallica_-_Load_cover" translatesAutoresizingMaskIntoConstraints="NO" id="b6G-ca-EsN">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="72R-31-kcN"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-9T-GN1">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="ODf-MY-38V" eventType="touchUpInside" id="pyp-8y-CYB"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d1W-V4-50t">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Wish I may, wish I might
+Have this I wish tonight
+Are you satisfied?
+Dig for gold, dig for fame
+You dig to make your name
+Are you pacified?
+
+All the wants you waste
+All the things you’ve chased
+
+Then it all crashes down
+And you break your crown
+And you point your finger
+But there’s no one around
+Just want one thing
+Just to play the king
+But the castle’s crumbled
+And you’re left with just a name
+
+Where’s your crown,
+King Nothing?
+Where’s your crown?
+
+Hot and cold, bought and sold
+A heart as hard as gold
+Are you satisfied?
+Wish I might, wish I may
+You wish your life away
+Are you pacified?
+
+All the wants you waste
+All the things you’ve chased
+
+Then it all crashes down
+And you break your crown
+And you point your finger
+But there’s no one around
+Just want one thing
+Just to play the king
+But the castle’s crumbled
+And you’re left with just a name
+Where’s your crown, King Nothing?
+Where’s your crown?
+
+I wish I may, I wish I might
+Have this wish I wish tonight
+I want that star, I want it now
+I want it all and I don’t care how
+
+Careful what you wish
+Careful what you say
+Careful what you wish, you may regret it
+Careful what you wish, you just might get it
+
+Then it all crashes down
+And you break your crown
+And you point your finger
+But there’s no one around
+Just want one thing
+Just to play the king
+But the castle’s crumbled
+And you’re left with just a name
+
+Where’s your crown, King Nothing?
+
+Nothing
+
+You’re just nothing
+Where’s your crown, King Nothing?
+You’re just nothing
+Absolutely nothing
+
+Off to never-never land</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXj-p8-YP3">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="ODf-MY-38V" eventType="touchUpInside" id="6Ah-dK-9a0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b6G-ca-EsN" firstAttribute="top" secondItem="DE8-qf-LGm" secondAttribute="top" id="CWy-fc-I37"/>
+                            <constraint firstAttribute="bottom" secondItem="d1W-V4-50t" secondAttribute="bottom" constant="20" symbolic="YES" id="OFj-M9-9rh"/>
+                            <constraint firstItem="b6G-ca-EsN" firstAttribute="leading" secondItem="d1W-V4-50t" secondAttribute="leading" id="Rfi-8N-uis"/>
+                            <constraint firstItem="b6G-ca-EsN" firstAttribute="trailing" secondItem="d1W-V4-50t" secondAttribute="trailing" id="gIO-vB-bXO"/>
+                            <constraint firstItem="yXj-p8-YP3" firstAttribute="top" secondItem="b6G-ca-EsN" secondAttribute="bottom" constant="46" id="gnJ-hf-25A"/>
+                            <constraint firstItem="DE8-qf-LGm" firstAttribute="trailing" secondItem="U9O-9T-GN1" secondAttribute="trailing" constant="23" id="iEc-jz-xwQ"/>
+                            <constraint firstItem="d1W-V4-50t" firstAttribute="top" secondItem="yXj-p8-YP3" secondAttribute="bottom" constant="8" symbolic="YES" id="lpv-KX-Wxe"/>
+                            <constraint firstItem="b6G-ca-EsN" firstAttribute="centerX" secondItem="nLw-0N-42u" secondAttribute="centerX" id="mqE-DG-Omv"/>
+                            <constraint firstItem="yXj-p8-YP3" firstAttribute="baseline" secondItem="U9O-9T-GN1" secondAttribute="baseline" id="sDE-6R-Zdf"/>
+                            <constraint firstItem="b6G-ca-EsN" firstAttribute="leading" secondItem="DE8-qf-LGm" secondAttribute="leading" constant="40" id="sTc-MK-C82"/>
+                            <constraint firstItem="yXj-p8-YP3" firstAttribute="leading" secondItem="DE8-qf-LGm" secondAttribute="leading" constant="24" id="xcr-Tw-x2i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DE8-qf-LGm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sex-pw-bZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1719" y="-4350"/>
+        </scene>
+        <!--Van Halen1 View Controller-->
+        <scene sceneID="nm2-2e-dEx">
+            <objects>
+                <viewController id="t2x-Vt-sXW" customClass="VanHalen1ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qh3-W0-lLN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Van_Halen_-_Van_Halen_II" translatesAutoresizingMaskIntoConstraints="NO" id="G5D-uv-4zj">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Jt6-qG-AZ3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krF-ux-sj8">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="t2x-Vt-sXW" eventType="touchUpInside" id="BgM-CV-WKa"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rYt-Pk-Byp">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">She was seaside sittin', just a smokin' and a drinkin' on ringside, on top of the world, oh, yeah. 
+She had her drink in her hand; she had her toes in the sand and whoa, what a beautiful girl, ah, yeah. 
+What a sweet talkin' honey with a little bit of money can turn your head around. 
+Creatures from the sea with the look to me like she'd like to fool around. 
+What a snappy little mammy. Gonna keep her pappy happy and accompany me to the ends of the earth, ah, yeah. 
+Here I am, ain't no man of the world, no. 
+All I need is a beautiful girl. 
+Ah, yeah! Beautiful girls. 
+Well, I'm a bum in the sun and I'm having fun. 
+And I know you know I got no special plans. 
+All the bills are paid. I got it made in the shade, and all I nee, nee, need is the woman. 
+What a sweet talkin' honey with a little bit of money can turn your head around. 
+Creatures from the sea with the looks to me like she'd like to fool around. 
+Here I am, ain't no man of the world, no. 
+All I need is a beautiful girl. 
+Ah, yeah! Beautiful girls. 
+Now, I'm a seaside sittin', just a smokin' and a drinkin'; 
+I'm ringside, on top of the world. 
+I got a drink in my hand; I got my toes in the sand. 
+All I need is a beautiful girl. 
+Here I am, ain't no man of the world, no. 
+All I need is a beautiful girl. 
+Ah, yeah! Beautiful girls. 
+Ah, yeah! Beautiful girls. 
+[Repeat and fade]</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiG-es-YV1">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="t2x-Vt-sXW" eventType="touchUpInside" id="UC0-bQ-W9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G5D-uv-4zj" firstAttribute="leading" secondItem="rYt-Pk-Byp" secondAttribute="leading" id="1uG-se-yP0"/>
+                            <constraint firstItem="rYt-Pk-Byp" firstAttribute="top" secondItem="BiG-es-YV1" secondAttribute="bottom" constant="8" symbolic="YES" id="6CE-e8-KAT"/>
+                            <constraint firstItem="G5D-uv-4zj" firstAttribute="top" secondItem="c2J-qT-pd1" secondAttribute="top" id="HRl-Xd-5rY"/>
+                            <constraint firstItem="BiG-es-YV1" firstAttribute="leading" secondItem="c2J-qT-pd1" secondAttribute="leading" constant="24" id="It9-fd-Kh6"/>
+                            <constraint firstItem="BiG-es-YV1" firstAttribute="baseline" secondItem="krF-ux-sj8" secondAttribute="baseline" id="Loa-A4-mca"/>
+                            <constraint firstItem="c2J-qT-pd1" firstAttribute="trailing" secondItem="krF-ux-sj8" secondAttribute="trailing" constant="23" id="MUt-kr-qVp"/>
+                            <constraint firstItem="G5D-uv-4zj" firstAttribute="trailing" secondItem="rYt-Pk-Byp" secondAttribute="trailing" id="UbF-2E-4C4"/>
+                            <constraint firstItem="G5D-uv-4zj" firstAttribute="centerX" secondItem="qh3-W0-lLN" secondAttribute="centerX" id="VNE-RE-ad7"/>
+                            <constraint firstAttribute="bottom" secondItem="rYt-Pk-Byp" secondAttribute="bottom" constant="20" symbolic="YES" id="Zvo-0z-RoS"/>
+                            <constraint firstItem="BiG-es-YV1" firstAttribute="top" secondItem="G5D-uv-4zj" secondAttribute="bottom" constant="46" id="sEP-8w-R0m"/>
+                            <constraint firstItem="G5D-uv-4zj" firstAttribute="leading" secondItem="c2J-qT-pd1" secondAttribute="leading" constant="40" id="sbp-J8-eaD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c2J-qT-pd1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyY-z9-Ux9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1213" y="-2765"/>
+        </scene>
+        <!--Van Halen2 View Controller-->
+        <scene sceneID="YMk-F3-z7j">
+            <objects>
+                <viewController id="bSQ-Cr-Vwe" customClass="VanHalen2ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wmh-gm-0gq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Van_Halen_-_Women_and_Children_First" translatesAutoresizingMaskIntoConstraints="NO" id="JmK-TS-iZT">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9Bx-TO-Hpj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91w-DL-D7d">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="bSQ-Cr-Vwe" eventType="touchUpInside" id="ZGf-TK-atJ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-zA-ief">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Well, my baby, she don't want me around. 
+She said she's tired of watchin' me fall down. 
+She wants the good life, only the best. 
+But I like that bottle better than the rest. 
+And she said: I think that you're headed for a whole lot of trouble. 
+Well, I think that you're headed for a whole lot of trouble. 
+Well, I think that you're headed for a whole lot of trouble. 
+If you take your whiskey... 
+Well, that liquor in the nighttime leaves strange memories. 
+Seems a lifetime since yesterday. 
+Come the daybreak, come the morrow, 
+that woman's waited up all night for me again. 
+She said: Well, I think that you're headed for a whole lot of trouble. 
+Yeah, I think that you're headed for a whole lot of trouble. 
+Yeah, you know that you're headed for a lot of trouble. 
+If you take your whiskey home. 
+Some goes to women, some goes to Jesus, 
+though I'm absolutely certain both's all right. 
+But it takes me at least halfway to the label 
+'fore I can even make it through the night. 
+Well, I think that you're headed for a whole lot of trouble. 
+Yeah, I think that you're headed for a whole lot of trouble. 
+Yeah, you know that you're headed for a lot of trouble. 
+If you take your whiskey home.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxh-kp-CyL">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="bSQ-Cr-Vwe" eventType="touchUpInside" id="SeP-BU-xXg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JmK-TS-iZT" firstAttribute="top" secondItem="z60-Ar-HME" secondAttribute="top" id="FAc-fh-8qv"/>
+                            <constraint firstItem="Mxh-kp-CyL" firstAttribute="top" secondItem="JmK-TS-iZT" secondAttribute="bottom" constant="46" id="N75-vO-fiv"/>
+                            <constraint firstAttribute="bottom" secondItem="Zwe-zA-ief" secondAttribute="bottom" constant="20" symbolic="YES" id="Q3e-A1-ygg"/>
+                            <constraint firstItem="JmK-TS-iZT" firstAttribute="leading" secondItem="z60-Ar-HME" secondAttribute="leading" constant="40" id="ZLX-Tp-gDr"/>
+                            <constraint firstItem="JmK-TS-iZT" firstAttribute="trailing" secondItem="Zwe-zA-ief" secondAttribute="trailing" id="cVq-qB-64j"/>
+                            <constraint firstItem="JmK-TS-iZT" firstAttribute="centerX" secondItem="Wmh-gm-0gq" secondAttribute="centerX" id="ipU-ga-Oap"/>
+                            <constraint firstItem="JmK-TS-iZT" firstAttribute="leading" secondItem="Zwe-zA-ief" secondAttribute="leading" id="kHd-5r-e1C"/>
+                            <constraint firstItem="Mxh-kp-CyL" firstAttribute="leading" secondItem="z60-Ar-HME" secondAttribute="leading" constant="24" id="mec-N6-OzQ"/>
+                            <constraint firstItem="Mxh-kp-CyL" firstAttribute="baseline" secondItem="91w-DL-D7d" secondAttribute="baseline" id="mre-ta-cbm"/>
+                            <constraint firstItem="Zwe-zA-ief" firstAttribute="top" secondItem="Mxh-kp-CyL" secondAttribute="bottom" constant="8" symbolic="YES" id="tvF-s5-irM"/>
+                            <constraint firstItem="z60-Ar-HME" firstAttribute="trailing" secondItem="91w-DL-D7d" secondAttribute="trailing" constant="23" id="uuI-vy-Xxj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z60-Ar-HME"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rL0-uH-u3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="-2765"/>
+        </scene>
+        <!--Van Halen5 View Controller-->
+        <scene sceneID="OXF-UY-Na9">
+            <objects>
+                <viewController id="dGC-yy-9pZ" customClass="VanHalen5ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6cv-hm-4BL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Van_Halen_album" translatesAutoresizingMaskIntoConstraints="NO" id="ARZ-cD-L4j">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ekT-I1-ZqR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3Y-id-6Kc">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="dGC-yy-9pZ" eventType="touchUpInside" id="LPz-7d-5Mf"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uXc-RF-1ef">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Girl, you really got me now 
+You got me so I don't know what I'm doin' 
+Girl, you really got me now 
+You got me so I can't sleep at night 
+Girl, you really got me now 
+You got me so I don't know where I'm goin', yeah 
+Oh Girl, you really got me now 
+You got me so I can't sleep at night 
+You really got me 
+You really got me 
+You really got me 
+Please, don't ever let me be 
+I only wanna be by your side 
+Please, don't ever let me be 
+I only wanna be by your side 
+Girl, you really got me now 
+You got me so I don't know what I'm doin', yeah 
+Oh yeah, you really got me now 
+Got me so I can't sleep at night 
+You really got me 
+You really got me 
+You really got me 
+Oh no, no, ah 
+Girl, you really got me now 
+You got me so I don't know what I'm doin' 
+Ah girl, you really got me now 
+You got me so I can't sleep at night 
+Girl, you really got me now 
+You got me so I don't know where I'm goin', yeah 
+Oh yeah, you really got me now 
+Got me so I can't sleep at night 
+You really got me 
+You really got me 
+You really got me 
+Oh Oh Oh</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYd-IW-23b">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="dGC-yy-9pZ" eventType="touchUpInside" id="jPH-e1-ntt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ARZ-cD-L4j" firstAttribute="leading" secondItem="8OF-7N-6cj" secondAttribute="leading" constant="40" id="2VV-px-0pO"/>
+                            <constraint firstItem="uXc-RF-1ef" firstAttribute="top" secondItem="JYd-IW-23b" secondAttribute="bottom" constant="8" symbolic="YES" id="2Z4-5U-ltX"/>
+                            <constraint firstItem="JYd-IW-23b" firstAttribute="top" secondItem="ARZ-cD-L4j" secondAttribute="bottom" constant="46" id="NkC-zf-7R5"/>
+                            <constraint firstItem="JYd-IW-23b" firstAttribute="leading" secondItem="8OF-7N-6cj" secondAttribute="leading" constant="24" id="PIT-67-2SL"/>
+                            <constraint firstItem="ARZ-cD-L4j" firstAttribute="leading" secondItem="uXc-RF-1ef" secondAttribute="leading" id="SLe-va-pmE"/>
+                            <constraint firstItem="ARZ-cD-L4j" firstAttribute="trailing" secondItem="uXc-RF-1ef" secondAttribute="trailing" id="TBg-xk-ndb"/>
+                            <constraint firstItem="JYd-IW-23b" firstAttribute="baseline" secondItem="M3Y-id-6Kc" secondAttribute="baseline" id="b3H-UR-RzC"/>
+                            <constraint firstAttribute="bottom" secondItem="uXc-RF-1ef" secondAttribute="bottom" constant="20" symbolic="YES" id="bZb-3L-QEe"/>
+                            <constraint firstItem="ARZ-cD-L4j" firstAttribute="centerX" secondItem="6cv-hm-4BL" secondAttribute="centerX" id="nFJ-lt-teN"/>
+                            <constraint firstItem="ARZ-cD-L4j" firstAttribute="top" secondItem="8OF-7N-6cj" secondAttribute="top" id="qiy-XC-hxC"/>
+                            <constraint firstItem="8OF-7N-6cj" firstAttribute="trailing" secondItem="M3Y-id-6Kc" secondAttribute="trailing" constant="23" id="xgi-t9-bk8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8OF-7N-6cj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Il3-hM-I1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="-2013"/>
+        </scene>
+        <!--Van Halen3 View Controller-->
+        <scene sceneID="TTa-wN-1QN">
+            <objects>
+                <viewController id="1cC-vV-z8E" customClass="VanHalen3ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eqf-9a-KQc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Van_Halen_album" translatesAutoresizingMaskIntoConstraints="NO" id="sKG-gQ-PfD">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="SyJ-vv-fto"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQM-2S-see">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="1cC-vV-z8E" eventType="touchUpInside" id="8BC-bf-I6e"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O5n-25-zEE">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">They may talk about you cold when you were 
+Headed for the skies 
+But you were young and bold and baby didn't that 
+Change with a wink of your eye 
+Now no one's talkin' 'bout those 
+Crazy days gone by 
+No one talks about the 
+Times you cried 
+(Oooh) Little dreamer 
+(Oooh) Uh, little dreamer 
+And then they voted you 
+Least likely to succeed 
+I hadda tell them baby, you were armed with 
+All you'd need 
+Seems no one's talkin' 'bout those 
+Crazy days gone past 
+Weren't they amazed when you were 
+Really last 
+(Oooh) You are the little dreamer 
+(Oooh) You were the little dreamer, yeah, yeah 
+Yeah they talk about you cold when you were 
+Headed for the skies 
+But you were young and bold and baby didn't that 
+Change with a wink of your eye 
+Seems no one's talkin' 'bout the 
+Crazy days gone past 
+Weren't they amazed when you were 
+Really last 
+(Oooh) You are the little dreamer 
+(Oooh) Little dreamer, oh yeah, oh 
+(Oooh) Little dreamer 
+(Oooh) Little dreamer</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fac-KG-2R8">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="1cC-vV-z8E" eventType="touchUpInside" id="5Yb-qM-4tk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sKG-gQ-PfD" firstAttribute="top" secondItem="Oeb-AJ-K8U" secondAttribute="top" id="1hZ-56-K9P"/>
+                            <constraint firstItem="Oeb-AJ-K8U" firstAttribute="trailing" secondItem="SQM-2S-see" secondAttribute="trailing" constant="23" id="2d1-iH-X4j"/>
+                            <constraint firstItem="sKG-gQ-PfD" firstAttribute="leading" secondItem="Oeb-AJ-K8U" secondAttribute="leading" constant="40" id="7PM-jj-ThR"/>
+                            <constraint firstItem="sKG-gQ-PfD" firstAttribute="centerX" secondItem="Eqf-9a-KQc" secondAttribute="centerX" id="ItG-MN-IH8"/>
+                            <constraint firstItem="fac-KG-2R8" firstAttribute="leading" secondItem="Oeb-AJ-K8U" secondAttribute="leading" constant="24" id="U6a-9R-DMQ"/>
+                            <constraint firstItem="sKG-gQ-PfD" firstAttribute="leading" secondItem="O5n-25-zEE" secondAttribute="leading" id="d5A-Om-dXz"/>
+                            <constraint firstItem="fac-KG-2R8" firstAttribute="baseline" secondItem="SQM-2S-see" secondAttribute="baseline" id="eRm-jp-73s"/>
+                            <constraint firstAttribute="bottom" secondItem="O5n-25-zEE" secondAttribute="bottom" constant="20" symbolic="YES" id="loh-We-iSY"/>
+                            <constraint firstItem="O5n-25-zEE" firstAttribute="top" secondItem="fac-KG-2R8" secondAttribute="bottom" constant="8" symbolic="YES" id="pLp-hG-hJj"/>
+                            <constraint firstItem="sKG-gQ-PfD" firstAttribute="trailing" secondItem="O5n-25-zEE" secondAttribute="trailing" id="q1T-rR-qUj"/>
+                            <constraint firstItem="fac-KG-2R8" firstAttribute="top" secondItem="sKG-gQ-PfD" secondAttribute="bottom" constant="46" id="r8u-fX-KI6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oeb-AJ-K8U"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4T-zl-5XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2366" y="-2013"/>
+        </scene>
+        <!--Van Halen4 View Controller-->
+        <scene sceneID="APr-6w-Zo1">
+            <objects>
+                <viewController id="YDI-yG-zLW" customClass="VanHalen4ViewController" customModule="Music" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oee-Qx-oq4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220px-Van_Halen_-_Fair_Warning" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-SS-fF4">
+                                <rect key="frame" x="40" y="64" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7kK-uB-y9W"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fM-m8-aeA">
+                                <rect key="frame" x="265" y="238" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="YDI-yG-zLW" eventType="touchUpInside" id="6JC-TX-cfD"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MJx-Ph-JpG">
+                                <rect key="frame" x="40" y="276" width="240" height="272"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">You said 
+I cannot get there from here, baby 
+And I don't care where I'm goin' 
+Here's to your thin red line 
+I'm stepping over 
+Thought you'd never miss me 
+'Til I got a Fat City address 
+Non-stop talker, what a rocker! 
+Blue eyed murder in a size 5 dress 
+Change, nothing stays the same 
+Unchained, yeah you hit the ground running 
+Change, and nothing stays the same 
+Unchained, yeah you hit the ground running 
+No, I don't ask for permission 
+This is my chance to fly 
+Maybe enough ain't enough for you 
+But it's my turn to try 
+Thought you'd never miss me 
+'Til I got a Fat City address 
+Non-stop talker, what a rocker! 
+Blue-eyed murder in a side-swiped dress 
+Change, nothing stays the same 
+Unchained, and ya hit the ground running 
+Change, and nothing stays the same 
+Unchained, yeah ya hit the ground running 
+Change, nothing stays the same 
+Unchained, and ya hit the ground running 
+Change, and nothing stays the same 
+Unchained, yeah ya hit the ground running 
+Take a look at this! 
+Hey, man, that suit is you! 
+You'll get some leg tonight for sure! 
+Tell us how you do! 
+(Come on, Dave, give me a break.) 
+Hey, hey, hey, hey, one break coming up! 
+Change, and nothing stays the same 
+Unchained, yeah ya hit the ground running 
+Change, and nothing stays the same 
+Unchained, yeah ya hit the ground running 
+Change, and nothing stays the same 
+Unchained, yeah ya hit the ground running 
+Change, and nothing stays the same 
+Unchained, yeah ya hit the ground running</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWu-Lr-2Su">
+                                <rect key="frame" x="24" y="238" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="YDI-yG-zLW" eventType="touchUpInside" id="TAr-lD-mNY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zjy-SS-fF4" firstAttribute="trailing" secondItem="MJx-Ph-JpG" secondAttribute="trailing" id="1uq-kP-xqa"/>
+                            <constraint firstItem="Zjy-SS-fF4" firstAttribute="leading" secondItem="MEb-62-GVU" secondAttribute="leading" constant="40" id="3c3-44-TxM"/>
+                            <constraint firstAttribute="bottom" secondItem="MJx-Ph-JpG" secondAttribute="bottom" constant="20" symbolic="YES" id="3n8-bD-qdc"/>
+                            <constraint firstItem="Zjy-SS-fF4" firstAttribute="top" secondItem="MEb-62-GVU" secondAttribute="top" id="GQl-h3-DLG"/>
+                            <constraint firstItem="kWu-Lr-2Su" firstAttribute="leading" secondItem="MEb-62-GVU" secondAttribute="leading" constant="24" id="MdG-RW-HfZ"/>
+                            <constraint firstItem="MJx-Ph-JpG" firstAttribute="top" secondItem="kWu-Lr-2Su" secondAttribute="bottom" constant="8" symbolic="YES" id="PcG-1l-nyT"/>
+                            <constraint firstItem="Zjy-SS-fF4" firstAttribute="leading" secondItem="MJx-Ph-JpG" secondAttribute="leading" id="X8e-Nr-3mg"/>
+                            <constraint firstItem="kWu-Lr-2Su" firstAttribute="baseline" secondItem="4fM-m8-aeA" secondAttribute="baseline" id="e32-Ok-G98"/>
+                            <constraint firstItem="MEb-62-GVU" firstAttribute="trailing" secondItem="4fM-m8-aeA" secondAttribute="trailing" constant="23" id="gcx-QB-txF"/>
+                            <constraint firstItem="kWu-Lr-2Su" firstAttribute="top" secondItem="Zjy-SS-fF4" secondAttribute="bottom" constant="46" id="mro-jt-ObM"/>
+                            <constraint firstItem="Zjy-SS-fF4" firstAttribute="centerX" secondItem="Oee-Qx-oq4" secondAttribute="centerX" id="wWU-zI-c0q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MEb-62-GVU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYy-Tj-Z21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1446" y="-2013"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="220px-ACDC-TNT" width="220" height="220"/>
+        <image name="220px-Black_Sabbath_-_Paranoid" width="165" height="165"/>
+        <image name="220px-Metallica_-_Kill_'Em_All_cover" width="52.799999237060547" height="52.799999237060547"/>
+        <image name="220px-Van_Halen_-_Fair_Warning" width="220" height="220"/>
+        <image name="220px-Van_Halen_-_Van_Halen_II" width="158.39999389648438" height="158.39999389648438"/>
+        <image name="220px-Van_Halen_-_Women_and_Children_First" width="158.39999389648438" height="158.39999389648438"/>
+        <image name="422827" width="354" height="354"/>
+        <image name="81K4W71c38L._SX355_" width="355" height="348"/>
+        <image name="Acdc_backinblack_cover" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="Metallica_-_Load_cover" width="72" height="72"/>
+        <image name="Van_Halen_album" width="165" height="165"/>
+        <image name="apple" width="52" height="46"/>
+        <image name="cover-black-ice" width="300" height="300"/>
+    </resources>
+</document>

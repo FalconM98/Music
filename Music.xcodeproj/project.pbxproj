@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD8DDDB022727D6A00939B69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8DDDAF22727D6A00939B69 /* AppDelegate.swift */; };
+		FD8DDDB222727D6A00939B69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8DDDB122727D6A00939B69 /* ViewController.swift */; };
+		FD8DDDB522727D6A00939B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8DDDB322727D6A00939B69 /* Main.storyboard */; };
+		FD8DDDB722727D6C00939B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8DDDB622727D6C00939B69 /* Assets.xcassets */; };
+		FD8DDDBA22727D6C00939B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD8DDDB822727D6C00939B69 /* LaunchScreen.storyboard */; };
+		FD8DDE512272E80600939B69 /* LetraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8DDE502272E80600939B69 /* LetraViewController.swift */; };
+		FD9690E52276641000D7850C /* TNT.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9690DD2276641000D7850C /* TNT.mp3 */; };
+		FD9690E82276641000D7850C /* Rock And Roll Train.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9690E02276641000D7850C /* Rock And Roll Train.mp3 */; };
+		FD9690EA2276641000D7850C /* Back In Black.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9690E22276641000D7850C /* Back In Black.mp3 */; };
+		FD9690ED2276643600D7850C /* CancionACDC1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9690EC2276643600D7850C /* CancionACDC1ViewController.swift */; };
+		FD9690F0227667F000D7850C /* CancionACDC2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9690EF227667F000D7850C /* CancionACDC2ViewController.swift */; };
+		FD9690F22276726500D7850C /* CancionACDC3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9690F12276726500D7850C /* CancionACDC3ViewController.swift */; };
+		FD9690F92276867B00D7850C /* N.I.B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9690F52276867B00D7850C /* N.I.B.mp3 */; };
+		FD9690FB2276867B00D7850C /* Paranoid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9690F72276867B00D7850C /* Paranoid.mp3 */; };
+		FD9690FC2276867B00D7850C /* Iron Man.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD9690F82276867B00D7850C /* Iron Man.mp3 */; };
+		FD969118227686A800D7850C /* Enter Sandman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD969113227686A800D7850C /* Enter Sandman.mp3 */; };
+		FD96911A227686A800D7850C /* Seek and Destroy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD969115227686A800D7850C /* Seek and Destroy.mp3 */; };
+		FD96911B227686A800D7850C /* King Nothing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD969116227686A800D7850C /* King Nothing.mp3 */; };
+		FD969122227686B100D7850C /* Beautiful Girls.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD96911D227686B100D7850C /* Beautiful Girls.mp3 */; };
+		FD969123227686B100D7850C /* Take Your Whiskey Home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD96911E227686B100D7850C /* Take Your Whiskey Home.mp3 */; };
+		FD969124227686B100D7850C /* Little Dreamer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD96911F227686B100D7850C /* Little Dreamer.mp3 */; };
+		FD969125227686B100D7850C /* Unchained.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD969120227686B100D7850C /* Unchained.mp3 */; };
+		FD969126227686B100D7850C /* You Really Got Me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD969121227686B100D7850C /* You Really Got Me.mp3 */; };
+		FD9691282276876200D7850C /* BlackSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691272276876200D7850C /* BlackSViewController.swift */; };
+		FD96912A22768CBD00D7850C /* CancionBlack1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96912922768CBD00D7850C /* CancionBlack1ViewController.swift */; };
+		FD96912C22768CCD00D7850C /* CancionBlack2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96912B22768CCD00D7850C /* CancionBlack2ViewController.swift */; };
+		FD96912E22768CDD00D7850C /* CancionBlack3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96912D22768CDD00D7850C /* CancionBlack3ViewController.swift */; };
+		FD9691312276957000D7850C /* MetallicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691302276957000D7850C /* MetallicaViewController.swift */; };
+		FD969133227698F900D7850C /* CancionMetallica1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD969132227698F900D7850C /* CancionMetallica1ViewController.swift */; };
+		FD9691362276991E00D7850C /* CancionMetallica2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691352276991E00D7850C /* CancionMetallica2ViewController.swift */; };
+		FD9691382276992D00D7850C /* CancionMetallica3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691372276992D00D7850C /* CancionMetallica3ViewController.swift */; };
+		FD96913B2276A07700D7850C /* VanHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96913A2276A07700D7850C /* VanHViewController.swift */; };
+		FD96913D2276A37500D7850C /* VanHalen1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96913C2276A37500D7850C /* VanHalen1ViewController.swift */; };
+		FD96913F2276A38600D7850C /* VanHalen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96913E2276A38600D7850C /* VanHalen2ViewController.swift */; };
+		FD9691412276A39300D7850C /* VanHalen3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691402276A39300D7850C /* VanHalen3ViewController.swift */; };
+		FD9691432276A3A100D7850C /* VanHalen4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691422276A3A100D7850C /* VanHalen4ViewController.swift */; };
+		FD9691452276A3AF00D7850C /* VanHalen5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9691442276A3AF00D7850C /* VanHalen5ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FD8DDDAC22727D6A00939B69 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8DDDAF22727D6A00939B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD8DDDB122727D6A00939B69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD8DDDB422727D6A00939B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD8DDDB622727D6C00939B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD8DDDB922727D6C00939B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD8DDDBB22727D6C00939B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD8DDE502272E80600939B69 /* LetraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetraViewController.swift; sourceTree = "<group>"; };
+		FD9690DD2276641000D7850C /* TNT.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TNT.mp3; sourceTree = "<group>"; };
+		FD9690E02276641000D7850C /* Rock And Roll Train.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rock And Roll Train.mp3"; sourceTree = "<group>"; };
+		FD9690E22276641000D7850C /* Back In Black.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Back In Black.mp3"; sourceTree = "<group>"; };
+		FD9690EC2276643600D7850C /* CancionACDC1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionACDC1ViewController.swift; sourceTree = "<group>"; };
+		FD9690EF227667F000D7850C /* CancionACDC2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionACDC2ViewController.swift; sourceTree = "<group>"; };
+		FD9690F12276726500D7850C /* CancionACDC3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionACDC3ViewController.swift; sourceTree = "<group>"; };
+		FD9690F52276867B00D7850C /* N.I.B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N.I.B.mp3; sourceTree = "<group>"; };
+		FD9690F72276867B00D7850C /* Paranoid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Paranoid.mp3; sourceTree = "<group>"; };
+		FD9690F82276867B00D7850C /* Iron Man.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Iron Man.mp3"; sourceTree = "<group>"; };
+		FD969113227686A800D7850C /* Enter Sandman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Enter Sandman.mp3"; sourceTree = "<group>"; };
+		FD969115227686A800D7850C /* Seek and Destroy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Seek and Destroy.mp3"; sourceTree = "<group>"; };
+		FD969116227686A800D7850C /* King Nothing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "King Nothing.mp3"; sourceTree = "<group>"; };
+		FD96911D227686B100D7850C /* Beautiful Girls.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beautiful Girls.mp3"; sourceTree = "<group>"; };
+		FD96911E227686B100D7850C /* Take Your Whiskey Home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Take Your Whiskey Home.mp3"; sourceTree = "<group>"; };
+		FD96911F227686B100D7850C /* Little Dreamer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Little Dreamer.mp3"; sourceTree = "<group>"; };
+		FD969120227686B100D7850C /* Unchained.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Unchained.mp3; sourceTree = "<group>"; };
+		FD969121227686B100D7850C /* You Really Got Me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "You Really Got Me.mp3"; sourceTree = "<group>"; };
+		FD9691272276876200D7850C /* BlackSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackSViewController.swift; sourceTree = "<group>"; };
+		FD96912922768CBD00D7850C /* CancionBlack1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionBlack1ViewController.swift; sourceTree = "<group>"; };
+		FD96912B22768CCD00D7850C /* CancionBlack2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionBlack2ViewController.swift; sourceTree = "<group>"; };
+		FD96912D22768CDD00D7850C /* CancionBlack3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionBlack3ViewController.swift; sourceTree = "<group>"; };
+		FD9691302276957000D7850C /* MetallicaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetallicaViewController.swift; sourceTree = "<group>"; };
+		FD969132227698F900D7850C /* CancionMetallica1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionMetallica1ViewController.swift; sourceTree = "<group>"; };
+		FD9691352276991E00D7850C /* CancionMetallica2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionMetallica2ViewController.swift; sourceTree = "<group>"; };
+		FD9691372276992D00D7850C /* CancionMetallica3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancionMetallica3ViewController.swift; sourceTree = "<group>"; };
+		FD96913A2276A07700D7850C /* VanHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanHViewController.swift; sourceTree = "<group>"; };
+		FD96913C2276A37500D7850C /* VanHalen1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanHalen1ViewController.swift; sourceTree = "<group>"; };
+		FD96913E2276A38600D7850C /* VanHalen2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanHalen2ViewController.swift; sourceTree = "<group>"; };
+		FD9691402276A39300D7850C /* VanHalen3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanHalen3ViewController.swift; sourceTree = "<group>"; };
+		FD9691422276A3A100D7850C /* VanHalen4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanHalen4ViewController.swift; sourceTree = "<group>"; };
+		FD9691442276A3AF00D7850C /* VanHalen5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanHalen5ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD8DDDA922727D6A00939B69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD8DDDA322727D6A00939B69 = {
+			isa = PBXGroup;
+			children = (
+				FD8DDDAE22727D6A00939B69 /* Music */,
+				FD8DDDAD22727D6A00939B69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD8DDDAD22727D6A00939B69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD8DDDAC22727D6A00939B69 /* Music.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD8DDDAE22727D6A00939B69 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				FD9691462276AE6D00D7850C /* VanHalenViewController */,
+				FD9691392276A02700D7850C /* MetallicaViewController */,
+				FD96912F2276949600D7850C /* BlackViewController */,
+				FD9690F32276863000D7850C /* ACDCViewController */,
+				FD8DDDAF22727D6A00939B69 /* AppDelegate.swift */,
+				FD8DDDB122727D6A00939B69 /* ViewController.swift */,
+				FD8DDE502272E80600939B69 /* LetraViewController.swift */,
+				FD9691272276876200D7850C /* BlackSViewController.swift */,
+				FD9691302276957000D7850C /* MetallicaViewController.swift */,
+				FD96913A2276A07700D7850C /* VanHViewController.swift */,
+				FD8DDDB322727D6A00939B69 /* Main.storyboard */,
+				FD8DDDB622727D6C00939B69 /* Assets.xcassets */,
+				FD8DDDB822727D6C00939B69 /* LaunchScreen.storyboard */,
+				FD8DDDBB22727D6C00939B69 /* Info.plist */,
+				FD96911C227686B100D7850C /* Van Halen */,
+				FD969111227686A800D7850C /* Metallica */,
+				FD9690F42276867B00D7850C /* Black Sabbath */,
+				FD9690DB2276641000D7850C /* AC DC */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		FD9690DB2276641000D7850C /* AC DC */ = {
+			isa = PBXGroup;
+			children = (
+				FD9690E22276641000D7850C /* Back In Black.mp3 */,
+				FD9690DD2276641000D7850C /* TNT.mp3 */,
+				FD9690E02276641000D7850C /* Rock And Roll Train.mp3 */,
+			);
+			path = "AC DC";
+			sourceTree = "<group>";
+		};
+		FD9690F32276863000D7850C /* ACDCViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD9690EC2276643600D7850C /* CancionACDC1ViewController.swift */,
+				FD9690EF227667F000D7850C /* CancionACDC2ViewController.swift */,
+				FD9690F12276726500D7850C /* CancionACDC3ViewController.swift */,
+			);
+			path = ACDCViewController;
+			sourceTree = "<group>";
+		};
+		FD9690F42276867B00D7850C /* Black Sabbath */ = {
+			isa = PBXGroup;
+			children = (
+				FD9690F52276867B00D7850C /* N.I.B.mp3 */,
+				FD9690F72276867B00D7850C /* Paranoid.mp3 */,
+				FD9690F82276867B00D7850C /* Iron Man.mp3 */,
+			);
+			path = "Black Sabbath";
+			sourceTree = "<group>";
+		};
+		FD969111227686A800D7850C /* Metallica */ = {
+			isa = PBXGroup;
+			children = (
+				FD969113227686A800D7850C /* Enter Sandman.mp3 */,
+				FD969116227686A800D7850C /* King Nothing.mp3 */,
+				FD969115227686A800D7850C /* Seek and Destroy.mp3 */,
+			);
+			path = Metallica;
+			sourceTree = "<group>";
+		};
+		FD96911C227686B100D7850C /* Van Halen */ = {
+			isa = PBXGroup;
+			children = (
+				FD96911D227686B100D7850C /* Beautiful Girls.mp3 */,
+				FD96911E227686B100D7850C /* Take Your Whiskey Home.mp3 */,
+				FD96911F227686B100D7850C /* Little Dreamer.mp3 */,
+				FD969120227686B100D7850C /* Unchained.mp3 */,
+				FD969121227686B100D7850C /* You Really Got Me.mp3 */,
+			);
+			path = "Van Halen";
+			sourceTree = "<group>";
+		};
+		FD96912F2276949600D7850C /* BlackViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD96912922768CBD00D7850C /* CancionBlack1ViewController.swift */,
+				FD96912B22768CCD00D7850C /* CancionBlack2ViewController.swift */,
+				FD96912D22768CDD00D7850C /* CancionBlack3ViewController.swift */,
+			);
+			path = BlackViewController;
+			sourceTree = "<group>";
+		};
+		FD9691392276A02700D7850C /* MetallicaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD969132227698F900D7850C /* CancionMetallica1ViewController.swift */,
+				FD9691352276991E00D7850C /* CancionMetallica2ViewController.swift */,
+				FD9691372276992D00D7850C /* CancionMetallica3ViewController.swift */,
+			);
+			path = MetallicaViewController;
+			sourceTree = "<group>";
+		};
+		FD9691462276AE6D00D7850C /* VanHalenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD96913C2276A37500D7850C /* VanHalen1ViewController.swift */,
+				FD96913E2276A38600D7850C /* VanHalen2ViewController.swift */,
+				FD9691402276A39300D7850C /* VanHalen3ViewController.swift */,
+				FD9691422276A3A100D7850C /* VanHalen4ViewController.swift */,
+				FD9691442276A3AF00D7850C /* VanHalen5ViewController.swift */,
+			);
+			path = VanHalenViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD8DDDAB22727D6A00939B69 /* Music */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD8DDDBE22727D6C00939B69 /* Build configuration list for PBXNativeTarget "Music" */;
+			buildPhases = (
+				FD8DDDA822727D6A00939B69 /* Sources */,
+				FD8DDDA922727D6A00939B69 /* Frameworks */,
+				FD8DDDAA22727D6A00939B69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Music;
+			productName = Music;
+			productReference = FD8DDDAC22727D6A00939B69 /* Music.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD8DDDA422727D6A00939B69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Miguel Eduardo Garcia";
+				TargetAttributes = {
+					FD8DDDAB22727D6A00939B69 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FD8DDDA722727D6A00939B69 /* Build configuration list for PBXProject "Music" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD8DDDA322727D6A00939B69;
+			productRefGroup = FD8DDDAD22727D6A00939B69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD8DDDAB22727D6A00939B69 /* Music */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD8DDDAA22727D6A00939B69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9690E52276641000D7850C /* TNT.mp3 in Resources */,
+				FD8DDDBA22727D6C00939B69 /* LaunchScreen.storyboard in Resources */,
+				FD969122227686B100D7850C /* Beautiful Girls.mp3 in Resources */,
+				FD8DDDB722727D6C00939B69 /* Assets.xcassets in Resources */,
+				FD969125227686B100D7850C /* Unchained.mp3 in Resources */,
+				FD969124227686B100D7850C /* Little Dreamer.mp3 in Resources */,
+				FD8DDDB522727D6A00939B69 /* Main.storyboard in Resources */,
+				FD9690E82276641000D7850C /* Rock And Roll Train.mp3 in Resources */,
+				FD9690F92276867B00D7850C /* N.I.B.mp3 in Resources */,
+				FD9690FC2276867B00D7850C /* Iron Man.mp3 in Resources */,
+				FD9690EA2276641000D7850C /* Back In Black.mp3 in Resources */,
+				FD969123227686B100D7850C /* Take Your Whiskey Home.mp3 in Resources */,
+				FD969126227686B100D7850C /* You Really Got Me.mp3 in Resources */,
+				FD96911A227686A800D7850C /* Seek and Destroy.mp3 in Resources */,
+				FD9690FB2276867B00D7850C /* Paranoid.mp3 in Resources */,
+				FD96911B227686A800D7850C /* King Nothing.mp3 in Resources */,
+				FD969118227686A800D7850C /* Enter Sandman.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD8DDDA822727D6A00939B69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD96913B2276A07700D7850C /* VanHViewController.swift in Sources */,
+				FD96913F2276A38600D7850C /* VanHalen2ViewController.swift in Sources */,
+				FD9690F22276726500D7850C /* CancionACDC3ViewController.swift in Sources */,
+				FD8DDDB222727D6A00939B69 /* ViewController.swift in Sources */,
+				FD96912C22768CCD00D7850C /* CancionBlack2ViewController.swift in Sources */,
+				FD9691412276A39300D7850C /* VanHalen3ViewController.swift in Sources */,
+				FD8DDDB022727D6A00939B69 /* AppDelegate.swift in Sources */,
+				FD96913D2276A37500D7850C /* VanHalen1ViewController.swift in Sources */,
+				FD9691362276991E00D7850C /* CancionMetallica2ViewController.swift in Sources */,
+				FD96912E22768CDD00D7850C /* CancionBlack3ViewController.swift in Sources */,
+				FD9690ED2276643600D7850C /* CancionACDC1ViewController.swift in Sources */,
+				FD96912A22768CBD00D7850C /* CancionBlack1ViewController.swift in Sources */,
+				FD9691432276A3A100D7850C /* VanHalen4ViewController.swift in Sources */,
+				FD9691452276A3AF00D7850C /* VanHalen5ViewController.swift in Sources */,
+				FD9691282276876200D7850C /* BlackSViewController.swift in Sources */,
+				FD9691312276957000D7850C /* MetallicaViewController.swift in Sources */,
+				FD8DDE512272E80600939B69 /* LetraViewController.swift in Sources */,
+				FD9691382276992D00D7850C /* CancionMetallica3ViewController.swift in Sources */,
+				FD9690F0227667F000D7850C /* CancionACDC2ViewController.swift in Sources */,
+				FD969133227698F900D7850C /* CancionMetallica1ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FD8DDDB322727D6A00939B69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD8DDDB422727D6A00939B69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD8DDDB822727D6C00939B69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD8DDDB922727D6C00939B69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD8DDDBC22727D6C00939B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD8DDDBD22727D6C00939B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD8DDDBF22727D6C00939B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZFGY6QFJ6;
+				INFOPLIST_FILE = Music/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Programacion.Music;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FD8DDDC022727D6C00939B69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZFGY6QFJ6;
+				INFOPLIST_FILE = Music/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Programacion.Music;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD8DDDA722727D6A00939B69 /* Build configuration list for PBXProject "Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD8DDDBC22727D6C00939B69 /* Debug */,
+				FD8DDDBD22727D6C00939B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD8DDDBE22727D6C00939B69 /* Build configuration list for PBXNativeTarget "Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD8DDDBF22727D6C00939B69 /* Debug */,
+				FD8DDDC022727D6C00939B69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD8DDDA422727D6A00939B69 /* Project object */;
+}
